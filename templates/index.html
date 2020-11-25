@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form class="form-input-text" action="/summarise" method="post">
+    <h1 align="center">文本自动摘要</h1>
+    <h2>原文</h2>
+    <div id="inputText">
+        <input name="title" size="100%" placeholder="输入文章标题" required>
+        <textarea name="inputText" placeholder="输入文章" type="text" required></textarea>
+    </div>
+    <h2>摘要</h2>
+    <div id="summary">
+        <p class="summary">{{ summary }}</p>
+    </div>
+    <div id="summarise">
+        <input type="submit" name="summarise" value="summarise" size="100">
+    </div>
+</form>
+<!--<form class="reset" action="/reset", method="post">-->
+<!--    <div id="reset">-->
+<!--        <input type="reset" name="reset" value="reset" size="100">-->
+<!--    </div>-->
+<!--</form>-->
+{% endblock %}

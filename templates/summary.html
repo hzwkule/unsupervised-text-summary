@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<form class="form-input-text" action="/summarise" method="post">
+    <h1 align="center">unsupervised news summary</h1>
+    <h2>input news</h2>
+    <div id="inputText">
+        <input name="title" size="100%" placeholder="enter article title" required value={{ title }}>
+        <textarea name="inputText" placeholder="enter your article" type="text" required>{{ article }}</textarea>
+    </div>
+    <h2>output news</h2>
+    <div id="summary">
+        <p class="summary">{{ summary }}</p>
+    </div>
+    <div id="summarise">
+        <input type="submit" name="summarise" value="summarise" size="100">
+    </div>
+</form>
+<form class="reset" action="/reset", method="post">
+    <div id="reset">
+        <input type="reset" name="reset" value="reset" size="100">
+    </div>
+</form>
+{% endblock %}
